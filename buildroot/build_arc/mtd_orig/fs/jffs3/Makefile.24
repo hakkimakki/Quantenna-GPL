@@ -1,0 +1,43 @@
+#
+# fs/jffs3/Makefile.24
+#
+# JFFS2 Id: Makefile,v 1.43 2003/10/06 12:54:49 dwmw2  Exp
+# $Id$
+
+ifdef OUT_OF_TREE_BUILD
+include $(mtd)/defconfig
+
+# This must be first in the include path, so it goes in $(CC) rather
+# then $(EXTRA_CFLAGS)
+
+CC += -I$(mtd)/../../include
+EXTRA_CFLAGS := -g -Werror
+
+ifndef CONFIG_MTD
+EXTRA_CFLAGS += -DMTD_OUT_OF_TREE
+endif
+
+ifdef NONAND
+EXTRA_CFLAGS += -DNONAND
+endif
+endif
+
+obj-$(CONFIG_JFFS3_FS) += jffs3.o
+
+JFFS3_OBJS := compr.o dir.o file.o ioctl.o nodelist.o malloc.o
+JFFS3_OBJS += read.o nodemgmt.o readinode.o write.o scan.o gc.o
+JFFS3_OBJS += symlink-v24.o build.o erase.o background.o fs.o writev.o
+
+LINUX_OBJS += super-v24.o crc32.o rbtree.o
+
+NAND_OBJS-$(CONFIG_JFFS3_FS_NAND) += wbuf.o
+
+COMPR_OBJS-$(CONFIG_JFFS3_RUBIN)  += compr_rubin.o
+COMPR_OBJS-$(CONFIG_JFFS3_RTIME)  += compr_rtime.o
+COMPR_OBJS-$(CONFIG_JFFS3_ZLIB)   += compr_zlib.o
+
+obj-y := $(COMPR_OBJS-y) $(JFFS3_OBJS) $(LINUX_OBJS) $(NAND_OBJS-y)
+O_TARGET := jffs3.o
+
+include $(TOPDIR)/Rules.make
+

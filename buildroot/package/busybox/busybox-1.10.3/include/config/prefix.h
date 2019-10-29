@@ -1,1 +1,1 @@
-#define CONFIG_PREFIX "/home/yc_shen/O2_GPL_acR4311/buildroot/build_arc/root"
+#define CONFIG_PREFIX "/home/osboxes/AirTies4641_Sandbox/Quantenna-GPL/buildroot/build_arc/root"
