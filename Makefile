@@ -218,8 +218,7 @@ ALL_CONFIGS = 	topaz_config \
 		topaz_vzn_config \
 		topaz_dbdc_config \
 		topaz_msmr_config \
-		topaz_msft_config \
-		qhs710_vb_config
+		topaz_msft_config
 
 .PHONY: $(ALL_CONFIGS) config get_current_config get_current_platform board_config board_platform
 

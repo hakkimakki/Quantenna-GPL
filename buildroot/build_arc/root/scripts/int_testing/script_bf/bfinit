@@ -1,2 +1,0 @@
-#! /bin/sh
-iwpriv wifi0 setparam 78 0

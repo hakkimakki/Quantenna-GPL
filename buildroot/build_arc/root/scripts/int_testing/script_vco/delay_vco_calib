@@ -1,3 +1,0 @@
-#!/bin/ash
-sleep $2
-iwconfig wifi0 channel $1

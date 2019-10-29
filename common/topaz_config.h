@@ -30,10 +30,6 @@
 
 #include "current_platform.h"
 
-#ifndef TOPAZ_FPGA_PLATFORM
-	#define TOPAZ_FPGA_PLATFORM	0
-#endif
-
 #if !TOPAZ_FPGA_PLATFORM
 #undef TOPAZ_ICACHE_WORKAROUND
 #endif
@@ -73,7 +69,9 @@
 #define TOPAZ_PHY0_ADDR				1
 #define TOPAZ_PHY1_ADDR				3
 
-
+#ifndef TOPAZ_FPGA_PLATFORM
+	#define TOPAZ_FPGA_PLATFORM	0
+#endif
 
 /* Definition indicates that Topaz platform is FPGA */
 #if TOPAZ_FPGA_PLATFORM

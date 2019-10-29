@@ -1,3 +1,0 @@
-#!/bin/sh
-echo "set uc_flags 0xFF000000" > /sys/devices/qdrv/control
-

@@ -1429,7 +1429,7 @@ Linker script and memory map
  *(.text.*)
                 0x8801a228                . = ALIGN (0x4)
 
-.rodata         0x8801a228      0xd74
+.rodata         0x8801a228      0xd78
  *(.rodata)
  .rodata        0x8801a228       0x24 build_mini/lib_generic/vsprintf.o
                 0x8801a228                hex_asc
@@ -1486,67 +1486,67 @@ Linker script and memory map
                                 0x21c (size before relaxing)
  *fill*         0x8801af29        0x3 00
  .rodata.str1.4
-                0x8801af2c       0x70 build_mini/board/ruby_mini/ruby_mini.o
-                                 0x8c (size before relaxing)
+                0x8801af2c       0x74 build_mini/board/ruby_mini/ruby_mini.o
+                                 0x90 (size before relaxing)
  *(.rodata.*)
-                0x8801af9c                . = ALIGN (0x4)
+                0x8801afa0                . = ALIGN (0x4)
 
-.data           0x8801af9c      0x422
+.data           0x8801afa0      0x422
  *(.data)
- .data          0x8801af9c        0x0 build_mini/board/ruby/start.o
- .data          0x8801af9c        0x0 build_mini/board/ruby/flip.o
- .data          0x8801af9c        0x0 build_mini/board/ruby/gpio.o
- .data          0x8801af9c        0x0 build_mini/board/ruby/timer.o
- .data          0x8801af9c        0x0 build_mini/board/ruby/serial.o
- .data          0x8801af9c        0x0 build_mini/board/ruby/reset.o
- .data          0x8801af9c        0x4 build_mini/common/cmd_nvedit.o
- .data          0x8801afa0        0x0 build_mini/cpu/arc/cache.o
- .data          0x8801afa0      0x100 build_mini/lib_generic/ctype.o
-                0x8801afa0                _ctype
- .data          0x8801b0a0        0x0 build_mini/lib_generic/vsprintf.o
- .data          0x8801b0a0        0x0 build_mini/lib_generic/string.o
- .data          0x8801b0a0      0x21c build_mini/board/ruby_mini/ruby_mini_common.o
-                0x8801b0a0                load_addr
-                0x8801b0a4                __env
- .data          0x8801b2bc       0xe4 build_mini/board/ruby/arasan-emac-ahb.o
-                0x8801b2bc                mdc_clk_divisor
- .data          0x8801b3a0        0x0 build_mini/common/cmd_net.o
- .data          0x8801b3a0        0x0 build_mini/board/ruby/tftp_bootp_loop.o
- .data          0x8801b3a0       0x14 build_mini/net/tftp.o
-                0x8801b3a0                TftpRRQTimeoutMSecs
-                0x8801b3a4                TftpRRQTimeoutCountMax
- .data          0x8801b3b4        0x0 build_mini/net/rarp.o
- .data          0x8801b3b4        0x0 build_mini/net/eth.o
- .data          0x8801b3b4        0x0 build_mini/net/bootp.o
- .data          0x8801b3b4        0xa build_mini/net/net.o
-                0x8801b3b4                NetBcastAddr
-                0x8801b3bc                NetOurNativeVLAN
-                0x8801b3ba                NetOurVLAN
- .data          0x8801b3be        0x0 build_mini/board/ruby_mini/ruby_mini.o
- .data          0x8801b3be        0x0 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivsi3.o)
- .data          0x8801b3be        0x0 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_umodsi3.o)
- .data          0x8801b3be        0x0 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_divmod_tools.o)
- .data          0x8801b3be        0x0 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_millicodethunk.o)
- .data          0x8801b3be        0x0 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
+ .data          0x8801afa0        0x0 build_mini/board/ruby/start.o
+ .data          0x8801afa0        0x0 build_mini/board/ruby/flip.o
+ .data          0x8801afa0        0x0 build_mini/board/ruby/gpio.o
+ .data          0x8801afa0        0x0 build_mini/board/ruby/timer.o
+ .data          0x8801afa0        0x0 build_mini/board/ruby/serial.o
+ .data          0x8801afa0        0x0 build_mini/board/ruby/reset.o
+ .data          0x8801afa0        0x4 build_mini/common/cmd_nvedit.o
+ .data          0x8801afa4        0x0 build_mini/cpu/arc/cache.o
+ .data          0x8801afa4      0x100 build_mini/lib_generic/ctype.o
+                0x8801afa4                _ctype
+ .data          0x8801b0a4        0x0 build_mini/lib_generic/vsprintf.o
+ .data          0x8801b0a4        0x0 build_mini/lib_generic/string.o
+ .data          0x8801b0a4      0x21c build_mini/board/ruby_mini/ruby_mini_common.o
+                0x8801b0a4                load_addr
+                0x8801b0a8                __env
+ .data          0x8801b2c0       0xe4 build_mini/board/ruby/arasan-emac-ahb.o
+                0x8801b2c0                mdc_clk_divisor
+ .data          0x8801b3a4        0x0 build_mini/common/cmd_net.o
+ .data          0x8801b3a4        0x0 build_mini/board/ruby/tftp_bootp_loop.o
+ .data          0x8801b3a4       0x14 build_mini/net/tftp.o
+                0x8801b3a4                TftpRRQTimeoutMSecs
+                0x8801b3a8                TftpRRQTimeoutCountMax
+ .data          0x8801b3b8        0x0 build_mini/net/rarp.o
+ .data          0x8801b3b8        0x0 build_mini/net/eth.o
+ .data          0x8801b3b8        0x0 build_mini/net/bootp.o
+ .data          0x8801b3b8        0xa build_mini/net/net.o
+                0x8801b3b8                NetBcastAddr
+                0x8801b3c0                NetOurNativeVLAN
+                0x8801b3be                NetOurVLAN
+ .data          0x8801b3c2        0x0 build_mini/board/ruby_mini/ruby_mini.o
+ .data          0x8801b3c2        0x0 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivsi3.o)
+ .data          0x8801b3c2        0x0 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_umodsi3.o)
+ .data          0x8801b3c2        0x0 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_divmod_tools.o)
+ .data          0x8801b3c2        0x0 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_millicodethunk.o)
+ .data          0x8801b3c2        0x0 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
  *(.data.*)
-                0x8801b3c0                . = ALIGN (0x4)
-                0x8801b3c0                __bss_start = .
+                0x8801b3c4                . = ALIGN (0x4)
+                0x8801b3c4                __bss_start = .
 
-.bss            0x8801b3c0     0x5880
+.bss            0x8801b3c4     0x587c
  *(.bss)
- .bss           0x8801b3c0        0x0 build_mini/board/ruby/start.o
- .bss           0x8801b3c0        0x0 build_mini/board/ruby/flip.o
- .bss           0x8801b3c0        0x0 build_mini/board/ruby/gpio.o
- .bss           0x8801b3c0        0xc build_mini/board/ruby/timer.o
- .bss           0x8801b3cc        0x4 build_mini/board/ruby/serial.o
- .bss           0x8801b3d0        0x0 build_mini/board/ruby/reset.o
- .bss           0x8801b3d0        0x0 build_mini/common/cmd_nvedit.o
- .bss           0x8801b3d0        0x0 build_mini/cpu/arc/cache.o
- .bss           0x8801b3d0        0x0 build_mini/lib_generic/ctype.o
- .bss           0x8801b3d0        0x0 build_mini/lib_generic/vsprintf.o
- .bss           0x8801b3d0        0x0 build_mini/lib_generic/string.o
- .bss           0x8801b3d0       0x44 build_mini/board/ruby_mini/ruby_mini_common.o
- *fill*         0x8801b414        0xc 00
+ .bss           0x8801b3c4        0x0 build_mini/board/ruby/start.o
+ .bss           0x8801b3c4        0x0 build_mini/board/ruby/flip.o
+ .bss           0x8801b3c4        0x0 build_mini/board/ruby/gpio.o
+ .bss           0x8801b3c4        0xc build_mini/board/ruby/timer.o
+ .bss           0x8801b3d0        0x4 build_mini/board/ruby/serial.o
+ .bss           0x8801b3d4        0x0 build_mini/board/ruby/reset.o
+ .bss           0x8801b3d4        0x0 build_mini/common/cmd_nvedit.o
+ .bss           0x8801b3d4        0x0 build_mini/cpu/arc/cache.o
+ .bss           0x8801b3d4        0x0 build_mini/lib_generic/ctype.o
+ .bss           0x8801b3d4        0x0 build_mini/lib_generic/vsprintf.o
+ .bss           0x8801b3d4        0x0 build_mini/lib_generic/string.o
+ .bss           0x8801b3d4       0x44 build_mini/board/ruby_mini/ruby_mini_common.o
+ *fill*         0x8801b418        0x8 00
  .bss           0x8801b420     0x30a0 build_mini/board/ruby/arasan-emac-ahb.o
  .bss           0x8801e4c0        0x0 build_mini/common/cmd_net.o
  .bss           0x8801e4c0       0x80 build_mini/board/ruby/tftp_bootp_loop.o
@@ -1794,227 +1794,227 @@ OUTPUT(u-boot-mini elf32-littlearc)
  .debug_info    0x8802c1ad      0x54c build_mini/board/ruby_mini/ruby_mini.o
  .debug_info    0x8802c6f9      0x5cf /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
 
-.debug_line     0x8802ccc8     0x7002
- .debug_line    0x8802ccc8      0x15a build_mini/board/ruby/gpio.o
- .debug_line    0x8802ce22      0x275 build_mini/board/ruby/timer.o
- .debug_line    0x8802d097      0x24b build_mini/board/ruby/serial.o
- .debug_line    0x8802d2e2      0x111 build_mini/board/ruby/reset.o
- .debug_line    0x8802d3f3      0x76c build_mini/common/cmd_nvedit.o
- .debug_line    0x8802db5f      0x1fc build_mini/cpu/arc/cache.o
- .debug_line    0x8802dd5b       0x58 build_mini/lib_generic/ctype.o
- .debug_line    0x8802ddb3      0xc87 build_mini/lib_generic/vsprintf.o
- .debug_line    0x8802ea3a      0x58a build_mini/lib_generic/string.o
- .debug_line    0x8802efc4      0x451 build_mini/board/ruby_mini/ruby_mini_common.o
- .debug_line    0x8802f415     0x1501 build_mini/board/ruby/arasan-emac-ahb.o
- .debug_line    0x88030916      0x3ae build_mini/common/cmd_net.o
- .debug_line    0x88030cc4      0x317 build_mini/board/ruby/tftp_bootp_loop.o
- .debug_line    0x88030fdb      0x72c build_mini/net/tftp.o
- .debug_line    0x88031707      0x1ec build_mini/net/rarp.o
- .debug_line    0x880318f3      0x6a3 build_mini/net/eth.o
- .debug_line    0x88031f96      0x687 build_mini/net/bootp.o
- .debug_line    0x8803261d     0x10bb build_mini/net/net.o
- .debug_line    0x880336d8      0x3a4 build_mini/board/ruby_mini/ruby_mini.o
- .debug_line    0x88033a7c      0x24e /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
+.debug_line     0x8802ccc8     0x6c72
+ .debug_line    0x8802ccc8      0x147 build_mini/board/ruby/gpio.o
+ .debug_line    0x8802ce0f      0x24f build_mini/board/ruby/timer.o
+ .debug_line    0x8802d05e      0x238 build_mini/board/ruby/serial.o
+ .debug_line    0x8802d296       0xfe build_mini/board/ruby/reset.o
+ .debug_line    0x8802d394      0x720 build_mini/common/cmd_nvedit.o
+ .debug_line    0x8802dab4      0x1fc build_mini/cpu/arc/cache.o
+ .debug_line    0x8802dcb0       0x58 build_mini/lib_generic/ctype.o
+ .debug_line    0x8802dd08      0xc61 build_mini/lib_generic/vsprintf.o
+ .debug_line    0x8802e969      0x564 build_mini/lib_generic/string.o
+ .debug_line    0x8802eecd      0x405 build_mini/board/ruby_mini/ruby_mini_common.o
+ .debug_line    0x8802f2d2     0x148f build_mini/board/ruby/arasan-emac-ahb.o
+ .debug_line    0x88030761      0x388 build_mini/common/cmd_net.o
+ .debug_line    0x88030ae9      0x2de build_mini/board/ruby/tftp_bootp_loop.o
+ .debug_line    0x88030dc7      0x6e0 build_mini/net/tftp.o
+ .debug_line    0x880314a7      0x1c6 build_mini/net/rarp.o
+ .debug_line    0x8803166d      0x67d build_mini/net/eth.o
+ .debug_line    0x88031cea      0x63b build_mini/net/bootp.o
+ .debug_line    0x88032325     0x106f build_mini/net/net.o
+ .debug_line    0x88033394      0x358 build_mini/board/ruby_mini/ruby_mini.o
+ .debug_line    0x880336ec      0x24e /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
 
-.debug_frame    0x88033ccc     0x19d0
- .debug_frame   0x88033ccc       0x7c build_mini/board/ruby/gpio.o
- .debug_frame   0x88033d48       0xc8 build_mini/board/ruby/timer.o
- .debug_frame   0x88033e10      0x120 build_mini/board/ruby/serial.o
- .debug_frame   0x88033f30       0x48 build_mini/board/ruby/reset.o
- .debug_frame   0x88033f78      0x120 build_mini/common/cmd_nvedit.o
- .debug_frame   0x88034098      0x150 build_mini/cpu/arc/cache.o
- .debug_frame   0x880341e8      0x1a0 build_mini/lib_generic/vsprintf.o
- .debug_frame   0x88034388      0x258 build_mini/lib_generic/string.o
- .debug_frame   0x880345e0      0x264 build_mini/board/ruby_mini/ruby_mini_common.o
- .debug_frame   0x88034844      0x294 build_mini/board/ruby/arasan-emac-ahb.o
- .debug_frame   0x88034ad8       0xc4 build_mini/common/cmd_net.o
- .debug_frame   0x88034b9c       0xa4 build_mini/board/ruby/tftp_bootp_loop.o
- .debug_frame   0x88034c40       0xbc build_mini/net/tftp.o
- .debug_frame   0x88034cfc       0x80 build_mini/net/rarp.o
- .debug_frame   0x88034d7c      0x278 build_mini/net/eth.o
- .debug_frame   0x88034ff4      0x14c build_mini/net/bootp.o
- .debug_frame   0x88035140      0x434 build_mini/net/net.o
- .debug_frame   0x88035574       0xa8 build_mini/board/ruby_mini/ruby_mini.o
- .debug_frame   0x8803561c       0x80 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
+.debug_frame    0x8803393c     0x19d0
+ .debug_frame   0x8803393c       0x7c build_mini/board/ruby/gpio.o
+ .debug_frame   0x880339b8       0xc8 build_mini/board/ruby/timer.o
+ .debug_frame   0x88033a80      0x120 build_mini/board/ruby/serial.o
+ .debug_frame   0x88033ba0       0x48 build_mini/board/ruby/reset.o
+ .debug_frame   0x88033be8      0x120 build_mini/common/cmd_nvedit.o
+ .debug_frame   0x88033d08      0x150 build_mini/cpu/arc/cache.o
+ .debug_frame   0x88033e58      0x1a0 build_mini/lib_generic/vsprintf.o
+ .debug_frame   0x88033ff8      0x258 build_mini/lib_generic/string.o
+ .debug_frame   0x88034250      0x264 build_mini/board/ruby_mini/ruby_mini_common.o
+ .debug_frame   0x880344b4      0x294 build_mini/board/ruby/arasan-emac-ahb.o
+ .debug_frame   0x88034748       0xc4 build_mini/common/cmd_net.o
+ .debug_frame   0x8803480c       0xa4 build_mini/board/ruby/tftp_bootp_loop.o
+ .debug_frame   0x880348b0       0xbc build_mini/net/tftp.o
+ .debug_frame   0x8803496c       0x80 build_mini/net/rarp.o
+ .debug_frame   0x880349ec      0x278 build_mini/net/eth.o
+ .debug_frame   0x88034c64      0x14c build_mini/net/bootp.o
+ .debug_frame   0x88034db0      0x434 build_mini/net/net.o
+ .debug_frame   0x880351e4       0xa8 build_mini/board/ruby_mini/ruby_mini.o
+ .debug_frame   0x8803528c       0x80 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
 
-.debug_loc      0x8803569c     0x6810
- .debug_loc     0x8803569c      0x103 build_mini/board/ruby/gpio.o
- .debug_loc     0x8803579f      0x1dc build_mini/board/ruby/timer.o
- .debug_loc     0x8803597b      0x1ed build_mini/board/ruby/serial.o
- .debug_loc     0x88035b68       0xb5 build_mini/board/ruby/reset.o
- .debug_loc     0x88035c1d      0x831 build_mini/common/cmd_nvedit.o
- .debug_loc     0x8803644e      0x18f build_mini/cpu/arc/cache.o
- .debug_loc     0x880365dd      0xc98 build_mini/lib_generic/vsprintf.o
- .debug_loc     0x88037275      0x816 build_mini/lib_generic/string.o
- .debug_loc     0x88037a8b      0x239 build_mini/board/ruby_mini/ruby_mini_common.o
- .debug_loc     0x88037cc4     0x12be build_mini/board/ruby/arasan-emac-ahb.o
- .debug_loc     0x88038f82      0x442 build_mini/common/cmd_net.o
- .debug_loc     0x880393c4      0x1a9 build_mini/board/ruby/tftp_bootp_loop.o
- .debug_loc     0x8803956d      0x2a4 build_mini/net/tftp.o
- .debug_loc     0x88039811      0x119 build_mini/net/rarp.o
- .debug_loc     0x8803992a      0x6b5 build_mini/net/eth.o
- .debug_loc     0x88039fdf      0x603 build_mini/net/bootp.o
- .debug_loc     0x8803a5e2      0xf4e build_mini/net/net.o
- .debug_loc     0x8803b530       0xf9 build_mini/board/ruby_mini/ruby_mini.o
- .debug_loc     0x8803b629      0x883 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
+.debug_loc      0x8803530c     0x6810
+ .debug_loc     0x8803530c      0x103 build_mini/board/ruby/gpio.o
+ .debug_loc     0x8803540f      0x1dc build_mini/board/ruby/timer.o
+ .debug_loc     0x880355eb      0x1ed build_mini/board/ruby/serial.o
+ .debug_loc     0x880357d8       0xb5 build_mini/board/ruby/reset.o
+ .debug_loc     0x8803588d      0x831 build_mini/common/cmd_nvedit.o
+ .debug_loc     0x880360be      0x18f build_mini/cpu/arc/cache.o
+ .debug_loc     0x8803624d      0xc98 build_mini/lib_generic/vsprintf.o
+ .debug_loc     0x88036ee5      0x816 build_mini/lib_generic/string.o
+ .debug_loc     0x880376fb      0x239 build_mini/board/ruby_mini/ruby_mini_common.o
+ .debug_loc     0x88037934     0x12be build_mini/board/ruby/arasan-emac-ahb.o
+ .debug_loc     0x88038bf2      0x442 build_mini/common/cmd_net.o
+ .debug_loc     0x88039034      0x1a9 build_mini/board/ruby/tftp_bootp_loop.o
+ .debug_loc     0x880391dd      0x2a4 build_mini/net/tftp.o
+ .debug_loc     0x88039481      0x119 build_mini/net/rarp.o
+ .debug_loc     0x8803959a      0x6b5 build_mini/net/eth.o
+ .debug_loc     0x88039c4f      0x603 build_mini/net/bootp.o
+ .debug_loc     0x8803a252      0xf4e build_mini/net/net.o
+ .debug_loc     0x8803b1a0       0xf9 build_mini/board/ruby_mini/ruby_mini.o
+ .debug_loc     0x8803b299      0x883 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
 
 .debug_pubnames
-                0x8803beac      0xec3
+                0x8803bb1c      0xec3
  .debug_pubnames
-                0x8803beac       0x41 build_mini/board/ruby/gpio.o
+                0x8803bb1c       0x41 build_mini/board/ruby/gpio.o
  .debug_pubnames
-                0x8803beed       0x5e build_mini/board/ruby/timer.o
+                0x8803bb5d       0x5e build_mini/board/ruby/timer.o
  .debug_pubnames
-                0x8803bf4b       0x9d build_mini/board/ruby/serial.o
+                0x8803bbbb       0x9d build_mini/board/ruby/serial.o
  .debug_pubnames
-                0x8803bfe8       0x2f build_mini/board/ruby/reset.o
+                0x8803bc58       0x2f build_mini/board/ruby/reset.o
  .debug_pubnames
-                0x8803c017       0xb0 build_mini/common/cmd_nvedit.o
+                0x8803bc87       0xb0 build_mini/common/cmd_nvedit.o
  .debug_pubnames
-                0x8803c0c7      0x135 build_mini/cpu/arc/cache.o
+                0x8803bd37      0x135 build_mini/cpu/arc/cache.o
  .debug_pubnames
-                0x8803c1fc       0x1d build_mini/lib_generic/ctype.o
+                0x8803be6c       0x1d build_mini/lib_generic/ctype.o
  .debug_pubnames
-                0x8803c219       0x73 build_mini/lib_generic/vsprintf.o
+                0x8803be89       0x73 build_mini/lib_generic/vsprintf.o
  .debug_pubnames
-                0x8803c28c      0x125 build_mini/lib_generic/string.o
+                0x8803befc      0x125 build_mini/lib_generic/string.o
  .debug_pubnames
-                0x8803c3b1      0x186 build_mini/board/ruby_mini/ruby_mini_common.o
+                0x8803c021      0x186 build_mini/board/ruby_mini/ruby_mini_common.o
  .debug_pubnames
-                0x8803c537       0x99 build_mini/board/ruby/arasan-emac-ahb.o
+                0x8803c1a7       0x99 build_mini/board/ruby/arasan-emac-ahb.o
  .debug_pubnames
-                0x8803c5d0       0xa6 build_mini/common/cmd_net.o
+                0x8803c240       0xa6 build_mini/common/cmd_net.o
  .debug_pubnames
-                0x8803c676       0x48 build_mini/board/ruby/tftp_bootp_loop.o
+                0x8803c2e6       0x48 build_mini/board/ruby/tftp_bootp_loop.o
  .debug_pubnames
-                0x8803c6be       0x53 build_mini/net/tftp.o
+                0x8803c32e       0x53 build_mini/net/tftp.o
  .debug_pubnames
-                0x8803c711       0x2e build_mini/net/rarp.o
+                0x8803c381       0x2e build_mini/net/rarp.o
  .debug_pubnames
-                0x8803c73f      0x154 build_mini/net/eth.o
+                0x8803c3af      0x154 build_mini/net/eth.o
  .debug_pubnames
-                0x8803c893       0x3c build_mini/net/bootp.o
+                0x8803c503       0x3c build_mini/net/bootp.o
  .debug_pubnames
-                0x8803c8cf      0x404 build_mini/net/net.o
+                0x8803c53f      0x404 build_mini/net/net.o
  .debug_pubnames
-                0x8803ccd3       0x7c build_mini/board/ruby_mini/ruby_mini.o
+                0x8803c943       0x7c build_mini/board/ruby_mini/ruby_mini.o
  .debug_pubnames
-                0x8803cd4f       0x20 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
+                0x8803c9bf       0x20 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
 
-.debug_aranges  0x8803cd6f      0x260
+.debug_aranges  0x8803c9df      0x260
  .debug_aranges
-                0x8803cd6f       0x20 build_mini/board/ruby/gpio.o
+                0x8803c9df       0x20 build_mini/board/ruby/gpio.o
  .debug_aranges
-                0x8803cd8f       0x20 build_mini/board/ruby/timer.o
+                0x8803c9ff       0x20 build_mini/board/ruby/timer.o
  .debug_aranges
-                0x8803cdaf       0x20 build_mini/board/ruby/serial.o
+                0x8803ca1f       0x20 build_mini/board/ruby/serial.o
  .debug_aranges
-                0x8803cdcf       0x20 build_mini/board/ruby/reset.o
+                0x8803ca3f       0x20 build_mini/board/ruby/reset.o
  .debug_aranges
-                0x8803cdef       0x20 build_mini/common/cmd_nvedit.o
+                0x8803ca5f       0x20 build_mini/common/cmd_nvedit.o
  .debug_aranges
-                0x8803ce0f       0x20 build_mini/cpu/arc/cache.o
+                0x8803ca7f       0x20 build_mini/cpu/arc/cache.o
  .debug_aranges
-                0x8803ce2f       0x20 build_mini/lib_generic/vsprintf.o
+                0x8803ca9f       0x20 build_mini/lib_generic/vsprintf.o
  .debug_aranges
-                0x8803ce4f       0x20 build_mini/lib_generic/string.o
+                0x8803cabf       0x20 build_mini/lib_generic/string.o
  .debug_aranges
-                0x8803ce6f       0x20 build_mini/board/ruby_mini/ruby_mini_common.o
+                0x8803cadf       0x20 build_mini/board/ruby_mini/ruby_mini_common.o
  .debug_aranges
-                0x8803ce8f       0x20 build_mini/board/ruby/arasan-emac-ahb.o
+                0x8803caff       0x20 build_mini/board/ruby/arasan-emac-ahb.o
  .debug_aranges
-                0x8803ceaf       0x20 build_mini/common/cmd_net.o
+                0x8803cb1f       0x20 build_mini/common/cmd_net.o
  .debug_aranges
-                0x8803cecf       0x20 build_mini/board/ruby/tftp_bootp_loop.o
+                0x8803cb3f       0x20 build_mini/board/ruby/tftp_bootp_loop.o
  .debug_aranges
-                0x8803ceef       0x20 build_mini/net/tftp.o
+                0x8803cb5f       0x20 build_mini/net/tftp.o
  .debug_aranges
-                0x8803cf0f       0x20 build_mini/net/rarp.o
+                0x8803cb7f       0x20 build_mini/net/rarp.o
  .debug_aranges
-                0x8803cf2f       0x20 build_mini/net/eth.o
+                0x8803cb9f       0x20 build_mini/net/eth.o
  .debug_aranges
-                0x8803cf4f       0x20 build_mini/net/bootp.o
+                0x8803cbbf       0x20 build_mini/net/bootp.o
  .debug_aranges
-                0x8803cf6f       0x20 build_mini/net/net.o
+                0x8803cbdf       0x20 build_mini/net/net.o
  .debug_aranges
-                0x8803cf8f       0x20 build_mini/board/ruby_mini/ruby_mini.o
+                0x8803cbff       0x20 build_mini/board/ruby_mini/ruby_mini.o
  .debug_aranges
-                0x8803cfaf       0x20 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
+                0x8803cc1f       0x20 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
 
-.debug_ranges   0x8803cfcf      0x7c8
- .debug_ranges  0x8803cfcf       0x18 build_mini/board/ruby/gpio.o
- .debug_ranges  0x8803cfe7       0x18 build_mini/board/ruby/timer.o
- .debug_ranges  0x8803cfff       0x18 build_mini/board/ruby/serial.o
- .debug_ranges  0x8803d017       0x18 build_mini/common/cmd_nvedit.o
- .debug_ranges  0x8803d02f       0xf0 build_mini/lib_generic/vsprintf.o
- .debug_ranges  0x8803d11f      0x3c0 build_mini/board/ruby/arasan-emac-ahb.o
- .debug_ranges  0x8803d4df       0x30 build_mini/net/tftp.o
- .debug_ranges  0x8803d50f       0x38 build_mini/net/eth.o
- .debug_ranges  0x8803d547       0xd8 build_mini/net/bootp.o
- .debug_ranges  0x8803d61f       0xf0 build_mini/net/net.o
- .debug_ranges  0x8803d70f       0x18 build_mini/board/ruby_mini/ruby_mini.o
- .debug_ranges  0x8803d727       0x70 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
+.debug_ranges   0x8803cc3f      0x7c8
+ .debug_ranges  0x8803cc3f       0x18 build_mini/board/ruby/gpio.o
+ .debug_ranges  0x8803cc57       0x18 build_mini/board/ruby/timer.o
+ .debug_ranges  0x8803cc6f       0x18 build_mini/board/ruby/serial.o
+ .debug_ranges  0x8803cc87       0x18 build_mini/common/cmd_nvedit.o
+ .debug_ranges  0x8803cc9f       0xf0 build_mini/lib_generic/vsprintf.o
+ .debug_ranges  0x8803cd8f      0x3c0 build_mini/board/ruby/arasan-emac-ahb.o
+ .debug_ranges  0x8803d14f       0x30 build_mini/net/tftp.o
+ .debug_ranges  0x8803d17f       0x38 build_mini/net/eth.o
+ .debug_ranges  0x8803d1b7       0xd8 build_mini/net/bootp.o
+ .debug_ranges  0x8803d28f       0xf0 build_mini/net/net.o
+ .debug_ranges  0x8803d37f       0x18 build_mini/board/ruby_mini/ruby_mini.o
+ .debug_ranges  0x8803d397       0x70 /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
 
-.debug_str      0x8803d797     0x27cd
- .debug_str     0x8803d797      0x125 build_mini/board/ruby/gpio.o
-                                0x16b (size before relaxing)
- .debug_str     0x8803d8bc      0x140 build_mini/board/ruby/timer.o
-                                0x26c (size before relaxing)
- .debug_str     0x8803d9fc       0xe9 build_mini/board/ruby/serial.o
-                                0x2a7 (size before relaxing)
- .debug_str     0x8803dae5       0x94 build_mini/board/ruby/reset.o
-                                0x1af (size before relaxing)
- .debug_str     0x8803db79       0xd8 build_mini/common/cmd_nvedit.o
-                                0x2cf (size before relaxing)
- .debug_str     0x8803dc51      0x106 build_mini/cpu/arc/cache.o
-                                0x21f (size before relaxing)
- .debug_str     0x8803dd57       0x1b build_mini/lib_generic/ctype.o
-                                 0x7e (size before relaxing)
- .debug_str     0x8803dd72      0x164 build_mini/lib_generic/vsprintf.o
-                                0x2a2 (size before relaxing)
- .debug_str     0x8803ded6       0xe5 build_mini/lib_generic/string.o
-                                0x1f2 (size before relaxing)
- .debug_str     0x8803dfbb      0x24c build_mini/board/ruby_mini/ruby_mini_common.o
-                                0x4b2 (size before relaxing)
- .debug_str     0x8803e207      0xeab build_mini/board/ruby/arasan-emac-ahb.o
-                               0x110b (size before relaxing)
- .debug_str     0x8803f0b2      0x172 build_mini/common/cmd_net.o
-                                0x2c0 (size before relaxing)
- .debug_str     0x8803f224      0x124 build_mini/board/ruby/tftp_bootp_loop.o
-                                0x268 (size before relaxing)
- .debug_str     0x8803f348      0x1be build_mini/net/tftp.o
-                                0x318 (size before relaxing)
- .debug_str     0x8803f506       0xa1 build_mini/net/rarp.o
-                                0x1b9 (size before relaxing)
- .debug_str     0x8803f5a7      0x219 build_mini/net/eth.o
-                                0x3c9 (size before relaxing)
- .debug_str     0x8803f7c0      0x223 build_mini/net/bootp.o
-                                0x446 (size before relaxing)
- .debug_str     0x8803f9e3      0x417 build_mini/net/net.o
-                                0x82c (size before relaxing)
- .debug_str     0x8803fdfa       0x9d build_mini/board/ruby_mini/ruby_mini.o
-                                0x345 (size before relaxing)
- .debug_str     0x8803fe97       0xcd /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
+.debug_str      0x8803d407     0x27ba
+ .debug_str     0x8803d407      0x112 build_mini/board/ruby/gpio.o
+                                0x158 (size before relaxing)
+ .debug_str     0x8803d519      0x140 build_mini/board/ruby/timer.o
+                                0x259 (size before relaxing)
+ .debug_str     0x8803d659       0xe9 build_mini/board/ruby/serial.o
+                                0x294 (size before relaxing)
+ .debug_str     0x8803d742       0x94 build_mini/board/ruby/reset.o
+                                0x19c (size before relaxing)
+ .debug_str     0x8803d7d6       0xd8 build_mini/common/cmd_nvedit.o
+                                0x2bc (size before relaxing)
+ .debug_str     0x8803d8ae      0x106 build_mini/cpu/arc/cache.o
+                                0x20c (size before relaxing)
+ .debug_str     0x8803d9b4       0x1b build_mini/lib_generic/ctype.o
+                                 0x6b (size before relaxing)
+ .debug_str     0x8803d9cf      0x164 build_mini/lib_generic/vsprintf.o
+                                0x28f (size before relaxing)
+ .debug_str     0x8803db33       0xe5 build_mini/lib_generic/string.o
+                                0x1df (size before relaxing)
+ .debug_str     0x8803dc18      0x24c build_mini/board/ruby_mini/ruby_mini_common.o
+                                0x49f (size before relaxing)
+ .debug_str     0x8803de64      0xeab build_mini/board/ruby/arasan-emac-ahb.o
+                               0x10f8 (size before relaxing)
+ .debug_str     0x8803ed0f      0x172 build_mini/common/cmd_net.o
+                                0x2ad (size before relaxing)
+ .debug_str     0x8803ee81      0x124 build_mini/board/ruby/tftp_bootp_loop.o
+                                0x255 (size before relaxing)
+ .debug_str     0x8803efa5      0x1be build_mini/net/tftp.o
+                                0x305 (size before relaxing)
+ .debug_str     0x8803f163       0xa1 build_mini/net/rarp.o
+                                0x1a6 (size before relaxing)
+ .debug_str     0x8803f204      0x219 build_mini/net/eth.o
+                                0x3b6 (size before relaxing)
+ .debug_str     0x8803f41d      0x223 build_mini/net/bootp.o
+                                0x433 (size before relaxing)
+ .debug_str     0x8803f640      0x417 build_mini/net/net.o
+                                0x819 (size before relaxing)
+ .debug_str     0x8803fa57       0x9d build_mini/board/ruby_mini/ruby_mini.o
+                                0x332 (size before relaxing)
+ .debug_str     0x8803faf4       0xcd /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
                                 0x187 (size before relaxing)
 
-.comment        0x8803ff64      0x230
- .comment       0x8803ff64       0x1c build_mini/board/ruby/gpio.o
- .comment       0x8803ff80       0x1c build_mini/board/ruby/timer.o
- .comment       0x8803ff9c       0x1c build_mini/board/ruby/serial.o
- .comment       0x8803ffb8       0x1c build_mini/board/ruby/reset.o
- .comment       0x8803ffd4       0x1c build_mini/common/cmd_nvedit.o
- .comment       0x8803fff0       0x1c build_mini/cpu/arc/cache.o
- .comment       0x8804000c       0x1c build_mini/lib_generic/ctype.o
- .comment       0x88040028       0x1c build_mini/lib_generic/vsprintf.o
- .comment       0x88040044       0x1c build_mini/lib_generic/string.o
- .comment       0x88040060       0x1c build_mini/board/ruby_mini/ruby_mini_common.o
- .comment       0x8804007c       0x1c build_mini/board/ruby/arasan-emac-ahb.o
- .comment       0x88040098       0x1c build_mini/common/cmd_net.o
- .comment       0x880400b4       0x1c build_mini/board/ruby/tftp_bootp_loop.o
- .comment       0x880400d0       0x1c build_mini/net/tftp.o
- .comment       0x880400ec       0x1c build_mini/net/rarp.o
- .comment       0x88040108       0x1c build_mini/net/eth.o
- .comment       0x88040124       0x1c build_mini/net/bootp.o
- .comment       0x88040140       0x1c build_mini/net/net.o
- .comment       0x8804015c       0x1c build_mini/board/ruby_mini/ruby_mini.o
- .comment       0x88040178       0x1c /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)
+.comment        0x8803fbc1      0x230
+ .comment       0x8803fbc1       0x1c build_mini/board/ruby/gpio.o
+ .comment       0x8803fbdd       0x1c build_mini/board/ruby/timer.o
+ .comment       0x8803fbf9       0x1c build_mini/board/ruby/serial.o
+ .comment       0x8803fc15       0x1c build_mini/board/ruby/reset.o
+ .comment       0x8803fc31       0x1c build_mini/common/cmd_nvedit.o
+ .comment       0x8803fc4d       0x1c build_mini/cpu/arc/cache.o
+ .comment       0x8803fc69       0x1c build_mini/lib_generic/ctype.o
+ .comment       0x8803fc85       0x1c build_mini/lib_generic/vsprintf.o
+ .comment       0x8803fca1       0x1c build_mini/lib_generic/string.o
+ .comment       0x8803fcbd       0x1c build_mini/board/ruby_mini/ruby_mini_common.o
+ .comment       0x8803fcd9       0x1c build_mini/board/ruby/arasan-emac-ahb.o
+ .comment       0x8803fcf5       0x1c build_mini/common/cmd_net.o
+ .comment       0x8803fd11       0x1c build_mini/board/ruby/tftp_bootp_loop.o
+ .comment       0x8803fd2d       0x1c build_mini/net/tftp.o
+ .comment       0x8803fd49       0x1c build_mini/net/rarp.o
+ .comment       0x8803fd65       0x1c build_mini/net/eth.o
+ .comment       0x8803fd81       0x1c build_mini/net/bootp.o
+ .comment       0x8803fd9d       0x1c build_mini/net/net.o
+ .comment       0x8803fdb9       0x1c build_mini/board/ruby_mini/ruby_mini.o
+ .comment       0x8803fdd5       0x1c /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a(_udivdi3.o)

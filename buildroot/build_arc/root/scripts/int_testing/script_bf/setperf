@@ -1,3 +1,0 @@
-#!/bin/ash
-iwpriv wifi0 setparam 62 0xffff
-iwpriv wifi0 setparam 64 1

@@ -1,7 +1,0 @@
-#! /bin/sh
-bv=`cat /proc/bootcfg/env | grep ^$1= | sed -e 's/.*=//g'`
-if [ -z "$bv" ]
-then
-	bv=0
-fi
-echo $bv

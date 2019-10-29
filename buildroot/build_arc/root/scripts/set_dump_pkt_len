@@ -1,2 +1,0 @@
-#!/bin/ash
-echo "set dump_pkt_len $1" > /sys/devices/qdrv/control
