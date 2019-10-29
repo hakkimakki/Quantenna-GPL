@@ -340,7 +340,7 @@ Linker script and memory map
  *(.rodata.*)
                 0x88000cd0                . = ALIGN (0x4)
 
-.data           0x88000cd0    0x107d4
+.data           0x88000cd0    0x1078c
  *(.data)
  .data          0x88000cd0        0x0 u-boot.build/board/ruby/start.o
  .data          0x88000cd0        0x0 u-boot.build/board/ruby/flip.o
@@ -348,26 +348,26 @@ Linker script and memory map
  .data          0x88000cd0        0x0 u-boot.build/board/ruby_mini/ruby_piggy.o
  .data          0x88000cd0        0x0 u-boot.build/lib_generic/lzma/LzmaTools.o
  .data          0x88000cd0        0x0 u-boot.build/lib_generic/lzma/LzmaDecodeSize.o
- .data          0x88000cd0    0x107d4 u-boot.build/u-boot.bin.lzma.o
-                0x880114a0                payload_len
+ .data          0x88000cd0    0x1078c u-boot.build/u-boot.bin.lzma.o
+                0x88011458                payload_len
                 0x88000cd0                payload
  *(.data.*)
-                0x880114a4                . = ALIGN (0x4)
-                0x880114a4                __bss_start = .
+                0x8801145c                . = ALIGN (0x4)
+                0x8801145c                __bss_start = .
 
-.bss            0x880114a4        0x0
+.bss            0x8801145c        0x0
  *(.bss)
- .bss           0x880114a4        0x0 u-boot.build/board/ruby/start.o
- .bss           0x880114a4        0x0 u-boot.build/board/ruby/flip.o
- .bss           0x880114a4        0x0 u-boot.build/cpu/arc/cache.o
- .bss           0x880114a4        0x0 u-boot.build/board/ruby_mini/ruby_piggy.o
- .bss           0x880114a4        0x0 u-boot.build/lib_generic/lzma/LzmaTools.o
- .bss           0x880114a4        0x0 u-boot.build/lib_generic/lzma/LzmaDecodeSize.o
- .bss           0x880114a4        0x0 u-boot.build/u-boot.bin.lzma.o
+ .bss           0x8801145c        0x0 u-boot.build/board/ruby/start.o
+ .bss           0x8801145c        0x0 u-boot.build/board/ruby/flip.o
+ .bss           0x8801145c        0x0 u-boot.build/cpu/arc/cache.o
+ .bss           0x8801145c        0x0 u-boot.build/board/ruby_mini/ruby_piggy.o
+ .bss           0x8801145c        0x0 u-boot.build/lib_generic/lzma/LzmaTools.o
+ .bss           0x8801145c        0x0 u-boot.build/lib_generic/lzma/LzmaDecodeSize.o
+ .bss           0x8801145c        0x0 u-boot.build/u-boot.bin.lzma.o
  *(.bss.*)
-                0x880114a4                . = ALIGN (0x4)
-                0x880114a4                __bss_end = .
-                0x880114a4                __uboot_end = .
+                0x8801145c                . = ALIGN (0x4)
+                0x8801145c                __bss_end = .
+                0x8801145c                __uboot_end = .
 
 /DISCARD/
  *(.u_boot_cmd)
@@ -381,129 +381,129 @@ LOAD u-boot.build/u-boot.bin.lzma.o
 OUTPUT(u-boot-piggy elf32-littlearc)
 
 .gnu.linkonce.arcextmap.inst.2.5.2
-                0x880114a4       0x16
+                0x8801145c       0x16
  .gnu.linkonce.arcextmap.inst.2.5.2
-                0x880114a4       0x16 u-boot.build/board/ruby/start.o
+                0x8801145c       0x16 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.2.5.3
-                0x880114ba       0x16
+                0x88011472       0x16
  .gnu.linkonce.arcextmap.inst.2.5.3
-                0x880114ba       0x16 u-boot.build/board/ruby/start.o
+                0x88011472       0x16 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.2.5.4
-                0x880114d0       0x16
+                0x88011488       0x16
  .gnu.linkonce.arcextmap.inst.2.5.4
-                0x880114d0       0x16 u-boot.build/board/ruby/start.o
+                0x88011488       0x16 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.2.5.5
-                0x880114e6       0x14
+                0x8801149e       0x14
  .gnu.linkonce.arcextmap.inst.2.5.5
-                0x880114e6       0x14 u-boot.build/board/ruby/start.o
+                0x8801149e       0x14 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.2.5.6
-                0x880114fa       0x16
+                0x880114b2       0x16
  .gnu.linkonce.arcextmap.inst.2.5.6
-                0x880114fa       0x16 u-boot.build/board/ruby/start.o
+                0x880114b2       0x16 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.2.5.7
-                0x88011510       0x14
+                0x880114c8       0x14
  .gnu.linkonce.arcextmap.inst.2.5.7
-                0x88011510       0x14 u-boot.build/board/ruby/start.o
+                0x880114c8       0x14 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.3.5.6
-                0x88011524       0x14
+                0x880114dc       0x14
  .gnu.linkonce.arcextmap.inst.3.5.6
-                0x88011524       0x14 u-boot.build/board/ruby/start.o
+                0x880114dc       0x14 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.3.5.7
-                0x88011538       0x14
+                0x880114f0       0x14
  .gnu.linkonce.arcextmap.inst.3.5.7
-                0x88011538       0x14 u-boot.build/board/ruby/start.o
+                0x880114f0       0x14 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.3.5.8
-                0x8801154c       0x16
+                0x88011504       0x16
  .gnu.linkonce.arcextmap.inst.3.5.8
-                0x8801154c       0x16 u-boot.build/board/ruby/start.o
+                0x88011504       0x16 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.3.5.10
-                0x88011562        0xa
+                0x8801151a        0xa
  .gnu.linkonce.arcextmap.inst.3.5.10
-                0x88011562        0xa u-boot.build/board/ruby/start.o
+                0x8801151a        0xa u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.3.5.11
-                0x8801156c        0xa
+                0x88011524        0xa
  .gnu.linkonce.arcextmap.inst.3.5.11
-                0x8801156c        0xa u-boot.build/board/ruby/start.o
+                0x88011524        0xa u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.3.5.40
-                0x88011576       0x18
+                0x8801152e       0x18
  .gnu.linkonce.arcextmap.inst.3.5.40
-                0x88011576       0x18 u-boot.build/board/ruby/start.o
+                0x8801152e       0x18 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.3.5.41
-                0x8801158e       0x18
+                0x88011546       0x18
  .gnu.linkonce.arcextmap.inst.3.5.41
-                0x8801158e       0x18 u-boot.build/board/ruby/start.o
+                0x88011546       0x18 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.cond.16
-                0x880115a6        0xc
+                0x8801155e        0xc
  .gnu.linkonce.arcextmap.cond.16
-                0x880115a6        0xc u-boot.build/board/ruby/start.o
+                0x8801155e        0xc u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.cond.17
-                0x880115b2        0xc
+                0x8801156a        0xc
  .gnu.linkonce.arcextmap.cond.17
-                0x880115b2        0xc u-boot.build/board/ruby/start.o
+                0x8801156a        0xc u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.aux.65
-                0x880115be       0x12
+                0x88011576       0x12
  .gnu.linkonce.arcextmap.aux.65
-                0x880115be       0x12 u-boot.build/board/ruby/start.o
+                0x88011576       0x12 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.3.4.26
-                0x880115d0        0x9
+                0x88011588        0x9
  .gnu.linkonce.arcextmap.inst.3.4.26
-                0x880115d0        0x9 u-boot.build/board/ruby/start.o
+                0x88011588        0x9 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.3.4.27
-                0x880115d9        0xa
+                0x88011591        0xa
  .gnu.linkonce.arcextmap.inst.3.4.27
-                0x880115d9        0xa u-boot.build/board/ruby/start.o
+                0x88011591        0xa u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.3.4.28
-                0x880115e3        0xb
+                0x8801159b        0xb
  .gnu.linkonce.arcextmap.inst.3.4.28
-                0x880115e3        0xb u-boot.build/board/ruby/start.o
+                0x8801159b        0xb u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.3.4.29
-                0x880115ee        0xa
+                0x880115a6        0xa
  .gnu.linkonce.arcextmap.inst.3.4.29
-                0x880115ee        0xa u-boot.build/board/ruby/start.o
+                0x880115a6        0xa u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.cond.30
-                0x880115f8        0x6
+                0x880115b0        0x6
  .gnu.linkonce.arcextmap.cond.30
-                0x880115f8        0x6 u-boot.build/board/ruby/start.o
+                0x880115b0        0x6 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.cond.31
-                0x880115fe        0x7
+                0x880115b6        0x7
  .gnu.linkonce.arcextmap.cond.31
-                0x880115fe        0x7 u-boot.build/board/ruby/start.o
+                0x880115b6        0x7 u-boot.build/board/ruby/start.o
 
 .gnu.linkonce.arcextmap.inst.3.5.63
-                0x88011605        0xa
+                0x880115bd        0xa
  .gnu.linkonce.arcextmap.inst.3.5.63
-                0x88011605        0xa u-boot.build/board/ruby/start.o
+                0x880115bd        0xa u-boot.build/board/ruby/start.o
 
-.debug_frame    0x88011610      0x4a4
- .debug_frame   0x88011610      0x15c u-boot.build/cpu/arc/cache.o
- .debug_frame   0x8801176c       0x64 u-boot.build/board/ruby_mini/ruby_piggy.o
- .debug_frame   0x880117d0       0x5c u-boot.build/lib_generic/lzma/LzmaTools.o
- .debug_frame   0x8801182c      0x288 u-boot.build/lib_generic/lzma/LzmaDecodeSize.o
+.debug_frame    0x880115c8      0x4a4
+ .debug_frame   0x880115c8      0x15c u-boot.build/cpu/arc/cache.o
+ .debug_frame   0x88011724       0x64 u-boot.build/board/ruby_mini/ruby_piggy.o
+ .debug_frame   0x88011788       0x5c u-boot.build/lib_generic/lzma/LzmaTools.o
+ .debug_frame   0x880117e4      0x288 u-boot.build/lib_generic/lzma/LzmaDecodeSize.o
 
-.comment        0x88011ab4       0x8c
- .comment       0x88011ab4       0x1c u-boot.build/cpu/arc/cache.o
- .comment       0x88011ad0       0x1c u-boot.build/board/ruby_mini/ruby_piggy.o
- .comment       0x88011aec       0x1c u-boot.build/lib_generic/lzma/LzmaTools.o
- .comment       0x88011b08       0x1c u-boot.build/lib_generic/lzma/LzmaDecodeSize.o
- .comment       0x88011b24       0x1c u-boot.build/u-boot.bin.lzma.o
+.comment        0x88011a6c       0x8c
+ .comment       0x88011a6c       0x1c u-boot.build/cpu/arc/cache.o
+ .comment       0x88011a88       0x1c u-boot.build/board/ruby_mini/ruby_piggy.o
+ .comment       0x88011aa4       0x1c u-boot.build/lib_generic/lzma/LzmaTools.o
+ .comment       0x88011ac0       0x1c u-boot.build/lib_generic/lzma/LzmaDecodeSize.o
+ .comment       0x88011adc       0x1c u-boot.build/u-boot.bin.lzma.o

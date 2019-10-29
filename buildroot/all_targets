@@ -1,1 +1,1 @@
- uclibc kernel-headers uclibc bridge busybox iproute2 openssl qcsapi qtn_macfw wireless-tools wpa_supplicant wpa_cli wdskey zhostapd hostapd_cli
+ uclibc kernel-headers uclibc bridge busybox dhcp_client ipv6-mgmt libjson libcurl misc-utilits mtd ntpclient openssl php q_utils q_event qcsapi qeventd qharvest qtn_macfw qtn_dspfw qwebphpif wireless-tools wpa_supplicant wpa_cli wdskey zhostapd hostapd_cli zlib minihttpd ruby_fs cpioroot

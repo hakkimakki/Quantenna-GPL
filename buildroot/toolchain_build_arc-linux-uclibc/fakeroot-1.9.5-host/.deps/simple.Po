@@ -1,0 +1,5 @@
+simple.o: \
+ /home/osboxes/AirTies4641_Sandbox/Quantenna-GPL/buildroot/build_arc/fakeroot-1.9.5/simple.c \
+ /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:
