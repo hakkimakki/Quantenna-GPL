@@ -225,11 +225,6 @@ deps_networking/ping.o := \
     $(wildcard include/config/use/bb/shadow.h) \
   /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/sys-include/shadow.h \
   include/xatonum.h \
-  /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/sys-include/netinet/icmp6.h \
-    $(wildcard include/config/lags/onlink.h) \
-    $(wildcard include/config/lags/auto.h) \
-    $(wildcard include/config/rvltime.h) \
-    $(wildcard include/config/rpltime.h) \
 
 networking/ping.o: $(deps_networking/ping.o)
 

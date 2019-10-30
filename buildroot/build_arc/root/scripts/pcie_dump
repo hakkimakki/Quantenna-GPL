@@ -1,9 +1,0 @@
-#!/bin/sh
-
-if [ ! -f /proc/pcie_dma ]
-then
-	echo "use modprobe to load pcie module first"
-	exit 1
-fi
-
-echo "dump" > /proc/pcie_dma

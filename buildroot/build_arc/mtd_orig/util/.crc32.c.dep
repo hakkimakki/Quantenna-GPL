@@ -1,8 +1,0 @@
-crc32.o: crc32.c \
-  /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/sys-include/stdint.h \
-  /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/sys-include/features.h \
-  /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/sys-include/bits/uClibc_config.h \
-  /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/sys-include/bits/uClibc_arch_features.h \
-  /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/sys-include/sys/cdefs.h \
-  /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/sys-include/bits/wchar.h \
-  /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/sys-include/bits/wordsize.h

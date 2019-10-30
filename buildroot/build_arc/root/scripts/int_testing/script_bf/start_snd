@@ -1,2 +1,0 @@
-#!/bin/ash
-echo "1 10 0" > /proc/wlantxbf

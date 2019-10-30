@@ -1,3 +1,0 @@
-#! /bin/sh
-iwpriv wifi0 setparam 78 10
-iwpriv wifi0 setparam 68 0x11

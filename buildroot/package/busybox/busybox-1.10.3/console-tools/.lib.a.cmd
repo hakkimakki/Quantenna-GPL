@@ -1,1 +1,1 @@
-cmd_console-tools/lib.a := rm -f console-tools/lib.a; /usr/local/ARC/gcc//bin/arc-linux-uclibc-ar  rcs console-tools/lib.a console-tools/clear.o console-tools/reset.o
+cmd_console-tools/lib.a := rm -f console-tools/lib.a; /usr/local/ARC/gcc//bin/arc-linux-uclibc-ar  rcs console-tools/lib.a console-tools/chvt.o console-tools/clear.o console-tools/deallocvt.o console-tools/openvt.o console-tools/reset.o

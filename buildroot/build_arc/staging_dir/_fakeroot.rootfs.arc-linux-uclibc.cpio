@@ -1,3 +1,0 @@
-chown -R root:root /home/osboxes/AirTies4641_Sandbox/Quantenna-GPL/buildroot/build_arc/root
-/home/osboxes/AirTies4641_Sandbox/Quantenna-GPL/buildroot/build_arc/staging_dir/bin/makedevs -d target/generic/device_table.txt /home/osboxes/AirTies4641_Sandbox/Quantenna-GPL/buildroot/build_arc/root
-cd /home/osboxes/AirTies4641_Sandbox/Quantenna-GPL/buildroot/build_arc/root && find . | cpio --quiet -o -H newc > /home/osboxes/AirTies4641_Sandbox/Quantenna-GPL/buildroot/rootfs.arc-linux-uclibc.cpio

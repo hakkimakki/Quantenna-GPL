@@ -33,5 +33,5 @@
         'f','P','I','C','\0'
     };
     #define PLATFORM "platform: linux-arc"
-    #define DATE "built on: Tue Oct 29 19:07:58 2019"
+    #define DATE "built on: Wed Oct 30 12:25:42 2019"
 #endif

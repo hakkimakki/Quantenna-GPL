@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# Setup debug facility.
-#
-
-/scripts/offline_dump on > /dev/null &
-

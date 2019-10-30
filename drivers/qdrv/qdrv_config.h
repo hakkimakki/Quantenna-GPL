@@ -1,3 +1,3 @@
 /* Automatically generated file. Do not edit. */
-#define QDRV_CFG_PLATFORM_ID 10
-#define QDRV_CFG_TYPE "qhs710_vb_config"
+#define QDRV_CFG_PLATFORM_ID 432
+#define QDRV_CFG_TYPE "topaz_rgmii_config"

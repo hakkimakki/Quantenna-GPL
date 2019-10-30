@@ -361,9 +361,9 @@ $(ALL_CONFIGS):
 		false ;							\
 	fi
 	#Define Default hw_config_id
-	$(MAKE) -C . hw_config_id = 1207 board_config=$@ board_platform=$(shell perl -e 'if ( "$@" =~ /topaz/ ) { print "topaz"; } else { print "ruby"; }') board_config.mk.tmp
-	$(MAKE) -C . hw_config_id = 1207 board_config=$@ board_platform=$(shell perl -e 'if ( "$@" =~ /topaz/ ) { print "topaz"; } else { print "ruby"; }') common/current_platform.h.tmp
-	$(MAKE) -C . hw_config_id = 1207 board_config=$@ board_platform=$(shell perl -e 'if ( "$@" =~ /topaz/ ) { print "topaz"; } else { print "ruby"; }') configupdate
+	$(MAKE) -C . hw_config_id=1207 board_config=$@ board_platform=$(shell perl -e 'if ( "$@" =~ /topaz/ ) { print "topaz"; } else { print "ruby"; }') board_config.mk.tmp
+	$(MAKE) -C . hw_config_id=1207 board_config=$@ board_platform=$(shell perl -e 'if ( "$@" =~ /topaz/ ) { print "topaz"; } else { print "ruby"; }') common/current_platform.h.tmp
+	$(MAKE) -C . hw_config_id=1207 board_config=$@ board_platform=$(shell perl -e 'if ( "$@" =~ /topaz/ ) { print "topaz"; } else { print "ruby"; }') configupdate
 	@if [ -d $(POWER_TABLES_DIR)/$@ ]; then				\
 		(cd $(POWER_TABLES_DIR) && ln -nsf $@ board_config) ;	\
 	else								\

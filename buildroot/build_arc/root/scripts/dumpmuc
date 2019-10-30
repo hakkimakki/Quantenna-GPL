@@ -1,6 +1,0 @@
-#!/bin/ash
-
-if [ -f /sys/devices/qdrv/control ]
-then
-	echo "dump muc" > /sys/devices/qdrv/control
-fi

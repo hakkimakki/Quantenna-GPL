@@ -1,1 +1,0 @@
-root=/dev/mtdblock2 rootfstype=jffs2 ro console=ttyS1,115200

@@ -263,6 +263,8 @@ deps_findutils/find.o := \
     $(wildcard include/config/use/bb/shadow.h) \
   /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/sys-include/shadow.h \
   include/xatonum.h \
+  include/xregex.h \
+  /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/sys-include/regex.h \
 
 findutils/find.o: $(deps_findutils/find.o)
 

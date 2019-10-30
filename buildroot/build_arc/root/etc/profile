@@ -12,10 +12,10 @@ export PATH=\
 # If running interactively, then:
 if [ "$PS1" ]; then
 
-    if [ "`id -u`" -eq 0 ]; then 
-        export PS1='quantenna # '
+	if [ "`id -u`" -eq 0 ]; then 
+		export PS1='Quantenna # '
     else
-        export PS1='$ '
+		export PS1='$ '
     fi
 
     export USER=`id -un`
@@ -27,7 +27,7 @@ if [ "$PS1" ]; then
     export EDITOR='/bin/vi'
     export INPUTRC=/etc/inputrc
     export DMALLOC_OPTIONS=debug=0x34f47d83,inter=100,log=logfile
-    export FIRMWARE=/etc/firmware
+
     ### Some aliases
     alias ps2='ps facux '
     alias ps1='ps faxo "%U %t %p %a" '

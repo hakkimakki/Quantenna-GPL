@@ -1,1 +1,0 @@
-echo "delete qtn_hw_board_db.bin" > /proc/bootcfg/env

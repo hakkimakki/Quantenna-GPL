@@ -1,5 +1,5 @@
 Output of:
-/usr/local/ARC/gcc//bin/arc-linux-uclibc-gcc -Wall -Wshadow -Wwrite-strings -Wundef -Wstrict-prototypes -Wunused -Wunused-parameter -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Os -fno-builtin-strlen -finline-limit=0 -fomit-frame-pointer -ffunction-sections -fdata-sections -fno-guess-branch-probability -funsigned-char -static-libgcc -falign-functions=1 -falign-jumps=1 -falign-labels=1 -falign-loops=1 -Wdeclaration-after-statement -Wno-pointer-sign -o busybox_unstripped -Wl,--sort-common -Wl,--sort-section -Wl,alignment -Wl,--gc-sections -Wl,--start-group applets/built-in.o archival/lib.a archival/libunarchive/lib.a console-tools/lib.a coreutils/lib.a coreutils/libcoreutils/lib.a debianutils/lib.a e2fsprogs/lib.a editors/lib.a findutils/lib.a init/lib.a libbb/lib.a libpwdgrp/lib.a loginutils/lib.a miscutils/lib.a modutils/lib.a networking/lib.a networking/libiproute/lib.a networking/udhcp/lib.a printutils/lib.a procps/lib.a runit/lib.a selinux/lib.a shell/lib.a sysklogd/lib.a util-linux/lib.a util-linux/volume_id/lib.a archival/built-in.o archival/libunarchive/built-in.o console-tools/built-in.o coreutils/built-in.o coreutils/libcoreutils/built-in.o debianutils/built-in.o e2fsprogs/built-in.o editors/built-in.o findutils/built-in.o init/built-in.o libbb/built-in.o libpwdgrp/built-in.o loginutils/built-in.o miscutils/built-in.o modutils/built-in.o networking/built-in.o networking/libiproute/built-in.o networking/udhcp/built-in.o printutils/built-in.o procps/built-in.o runit/built-in.o selinux/built-in.o shell/built-in.o sysklogd/built-in.o util-linux/built-in.o util-linux/volume_id/built-in.o -Wl,--end-group -Wl,--start-group -lcrypt -Wl,--end-group -Wl,--warn-common -Wl,-Map -Wl,busybox_unstripped.map -Wl,--verbose
+/usr/local/ARC/gcc//bin/arc-linux-uclibc-gcc -Wall -Wshadow -Wwrite-strings -Wundef -Wstrict-prototypes -Wunused -Wunused-parameter -Wold-style-definition -Wmissing-prototypes -Wmissing-declarations -Os -fno-builtin-strlen -finline-limit=0 -fomit-frame-pointer -ffunction-sections -fdata-sections -fno-guess-branch-probability -funsigned-char -static-libgcc -falign-functions=1 -falign-jumps=1 -falign-labels=1 -falign-loops=1 -Wdeclaration-after-statement -Wno-pointer-sign -o busybox_unstripped -Wl,--sort-common -Wl,--sort-section -Wl,alignment -Wl,--gc-sections -Wl,--start-group applets/built-in.o archival/lib.a archival/libunarchive/lib.a console-tools/lib.a coreutils/lib.a coreutils/libcoreutils/lib.a debianutils/lib.a e2fsprogs/lib.a editors/lib.a findutils/lib.a init/lib.a libbb/lib.a libpwdgrp/lib.a loginutils/lib.a miscutils/lib.a modutils/lib.a networking/lib.a networking/libiproute/lib.a networking/udhcp/lib.a printutils/lib.a procps/lib.a runit/lib.a selinux/lib.a shell/lib.a sysklogd/lib.a util-linux/lib.a util-linux/volume_id/lib.a archival/built-in.o archival/libunarchive/built-in.o console-tools/built-in.o coreutils/built-in.o coreutils/libcoreutils/built-in.o debianutils/built-in.o e2fsprogs/built-in.o editors/built-in.o findutils/built-in.o init/built-in.o libbb/built-in.o libpwdgrp/built-in.o loginutils/built-in.o miscutils/built-in.o modutils/built-in.o networking/built-in.o networking/libiproute/built-in.o networking/udhcp/built-in.o printutils/built-in.o procps/built-in.o runit/built-in.o selinux/built-in.o shell/built-in.o sysklogd/built-in.o util-linux/built-in.o util-linux/volume_id/built-in.o -Wl,--end-group -Wl,--start-group -lcrypt -lm -Wl,--end-group -Wl,--warn-common -Wl,-Map -Wl,busybox_unstripped.map -Wl,--verbose
 ==========
 GNU ld (GNU Binutils) 2.17.ARC_2.3.20100222
   Supported emulations:
@@ -286,14 +286,22 @@ attempt to open libpwdgrp/lib.a succeeded
 attempt to open loginutils/lib.a succeeded
 (loginutils/lib.a)getty.o
 (loginutils/lib.a)login.o
+(loginutils/lib.a)su.o
+(loginutils/lib.a)sulogin.o
 (loginutils/lib.a)vlock.o
 attempt to open miscutils/lib.a succeeded
+(miscutils/lib.a)dc.o
+(miscutils/lib.a)less.o
+(miscutils/lib.a)mt.o
+(miscutils/lib.a)strings.o
+(miscutils/lib.a)time.o
 attempt to open modutils/lib.a succeeded
 (modutils/lib.a)insmod.o
 (modutils/lib.a)lsmod.o
 (modutils/lib.a)modprobe.o
 (modutils/lib.a)rmmod.o
 attempt to open networking/lib.a succeeded
+(networking/lib.a)arp.o
 (networking/lib.a)ftpgetput.o
 (networking/lib.a)hostname.o
 (networking/lib.a)ifconfig.o
@@ -309,11 +317,14 @@ attempt to open networking/lib.a succeeded
 (networking/lib.a)telnetd.o
 (networking/lib.a)tftp.o
 (networking/lib.a)vconfig.o
+(networking/lib.a)wget.o
 attempt to open networking/libiproute/lib.a succeeded
 (networking/libiproute/lib.a)ip_parse_common_args.o
 (networking/libiproute/lib.a)ipaddress.o
 (networking/libiproute/lib.a)iplink.o
 (networking/libiproute/lib.a)iproute.o
+(networking/libiproute/lib.a)iprule.o
+(networking/libiproute/lib.a)iptunnel.o
 (networking/libiproute/lib.a)libnetlink.o
 (networking/libiproute/lib.a)ll_addr.o
 (networking/libiproute/lib.a)ll_map.o
@@ -342,8 +353,13 @@ attempt to open util-linux/lib.a succeeded
 (util-linux/lib.a)dmesg.o
 (util-linux/lib.a)getopt.o
 (util-linux/lib.a)hexdump.o
+(util-linux/lib.a)hwclock.o
+(util-linux/lib.a)more.o
 (util-linux/lib.a)mount.o
 (util-linux/lib.a)pivot_root.o
+(util-linux/lib.a)rdate.o
+(util-linux/lib.a)swaponoff.o
+(util-linux/lib.a)switch_root.o
 (util-linux/lib.a)umount.o
 attempt to open util-linux/volume_id/lib.a succeeded
 attempt to open archival/built-in.o succeeded
@@ -372,24 +388,58 @@ attempt to open shell/built-in.o succeeded
 attempt to open sysklogd/built-in.o succeeded
 attempt to open util-linux/built-in.o succeeded
 attempt to open util-linux/volume_id/built-in.o succeeded
+(archival/lib.a)bbunzip.o
+(archival/lib.a)gzip.o
+(archival/lib.a)tar.o
+(archival/lib.a)unzip.o
+(archival/libunarchive/lib.a)data_extract_all.o
+(archival/libunarchive/lib.a)data_extract_to_stdout.o
+(archival/libunarchive/lib.a)data_skip.o
+(archival/libunarchive/lib.a)decompress_bunzip2.o
+(archival/libunarchive/lib.a)decompress_unzip.o
+(archival/libunarchive/lib.a)filter_accept_reject_list.o
+(archival/libunarchive/lib.a)find_list_entry.o
+(archival/libunarchive/lib.a)get_header_tar.o
+(archival/libunarchive/lib.a)get_header_tar_bz2.o
+(archival/libunarchive/lib.a)get_header_tar_gz.o
+(archival/libunarchive/lib.a)header_list.o
+(archival/libunarchive/lib.a)header_verbose_list.o
+(archival/libunarchive/lib.a)init_handle.o
+(archival/libunarchive/lib.a)open_transformer.o
+(archival/libunarchive/lib.a)seek_by_jump.o
+(archival/libunarchive/lib.a)seek_by_read.o
+(archival/libunarchive/lib.a)data_align.o
+(archival/libunarchive/lib.a)filter_accept_all.o
+(archival/libunarchive/lib.a)header_skip.o
+(console-tools/lib.a)chvt.o
 (console-tools/lib.a)clear.o
+(console-tools/lib.a)deallocvt.o
+(console-tools/lib.a)openvt.o
 (console-tools/lib.a)reset.o
 (coreutils/lib.a)basename.o
 (coreutils/lib.a)cat.o
+(coreutils/lib.a)chgrp.o
 (coreutils/lib.a)chmod.o
+(coreutils/lib.a)chown.o
+(coreutils/lib.a)chroot.o
 (coreutils/lib.a)cp.o
 (coreutils/lib.a)cut.o
 (coreutils/lib.a)date.o
 (coreutils/lib.a)dd.o
 (coreutils/lib.a)df.o
 (coreutils/lib.a)dirname.o
+(coreutils/lib.a)dos2unix.o
+(coreutils/lib.a)du.o
 (coreutils/lib.a)echo.o
 (coreutils/lib.a)env.o
 (coreutils/lib.a)expr.o
 (coreutils/lib.a)false.o
 (coreutils/lib.a)head.o
+(coreutils/lib.a)hostid.o
 (coreutils/lib.a)id.o
+(coreutils/lib.a)install.o
 (coreutils/lib.a)ln.o
+(coreutils/lib.a)logname.o
 (coreutils/lib.a)ls.o
 (coreutils/lib.a)md5_sha1_sum.o
 (coreutils/lib.a)mkdir.o
@@ -404,20 +454,27 @@ attempt to open util-linux/volume_id/built-in.o succeeded
 (coreutils/lib.a)stty.o
 (coreutils/lib.a)sync.o
 (coreutils/lib.a)tail.o
+(coreutils/lib.a)tee.o
 (coreutils/lib.a)test.o
 (coreutils/lib.a)touch.o
 (coreutils/lib.a)true.o
 (coreutils/lib.a)tty.o
 (coreutils/lib.a)uname.o
+(coreutils/lib.a)uniq.o
 (coreutils/lib.a)usleep.o
+(coreutils/lib.a)uudecode.o
+(coreutils/lib.a)uuencode.o
 (coreutils/lib.a)wc.o
+(coreutils/lib.a)whoami.o
 (coreutils/lib.a)yes.o
 (coreutils/libcoreutils/lib.a)cp_mv_stat.o
 (coreutils/libcoreutils/lib.a)getopt_mk_fifo_nod.o
 (debianutils/lib.a)mktemp.o
 (debianutils/lib.a)run_parts.o
+(debianutils/lib.a)start_stop_daemon.o
 (debianutils/lib.a)which.o
 (editors/lib.a)awk.o
+(editors/lib.a)cmp.o
 (editors/lib.a)sed.o
 (editors/lib.a)vi.o
 (findutils/lib.a)find.o
@@ -426,6 +483,7 @@ attempt to open util-linux/volume_id/built-in.o succeeded
 (init/lib.a)halt.o
 (init/lib.a)init.o
 (libbb/lib.a)ask_confirmation.o
+(libbb/lib.a)bb_askpass.o
 (libbb/lib.a)bb_do_delay.o
 (libbb/lib.a)bb_pwd.o
 (libbb/lib.a)bb_strtonum.o
@@ -433,9 +491,10 @@ attempt to open util-linux/volume_id/built-in.o succeeded
 (libbb/lib.a)chomp.o
 (libbb/lib.a)compare_string_array.o
 (libbb/lib.a)concat_path_file.o
+(libbb/lib.a)concat_subpath_file.o
 (libbb/lib.a)copy_file.o
 (libbb/lib.a)correct_password.o
-(libbb/lib.a)create_icmp6_socket.o
+(libbb/lib.a)crc32.o
 (libbb/lib.a)create_icmp_socket.o
 (libbb/lib.a)device_open.o
 (libbb/lib.a)dump.o
@@ -445,11 +504,15 @@ attempt to open util-linux/volume_id/built-in.o succeeded
 (libbb/lib.a)fgets_str.o
 (libbb/lib.a)find_mount_point.o
 (libbb/lib.a)find_pid_by_name.o
+(libbb/lib.a)get_console.o
 (libbb/lib.a)get_line_from_file.o
 (libbb/lib.a)getopt32.o
 (libbb/lib.a)getpty.o
 (libbb/lib.a)herror_msg.o
+(libbb/lib.a)herror_msg_and_die.o
+(libbb/lib.a)human_readable.o
 (libbb/lib.a)inet_common.o
+(libbb/lib.a)info_msg.o
 (libbb/lib.a)inode_hash.o
 (libbb/lib.a)isdirectory.o
 (libbb/lib.a)kernel_version.o
@@ -470,18 +533,24 @@ attempt to open util-linux/volume_id/built-in.o succeeded
 (libbb/lib.a)process_escape_sequence.o
 (libbb/lib.a)procps.o
 (libbb/lib.a)ptr_to_globals.o
+(libbb/lib.a)pw_encrypt.o
 (libbb/lib.a)recursive_action.o
 (libbb/lib.a)remove_file.o
+(libbb/lib.a)restricted_shell.o
+(libbb/lib.a)rtc.o
 (libbb/lib.a)run_shell.o
 (libbb/lib.a)safe_gethostname.o
 (libbb/lib.a)safe_strncpy.o
 (libbb/lib.a)setup_environment.o
+(libbb/lib.a)sha1.o
 (libbb/lib.a)signals.o
 (libbb/lib.a)simplify_path.o
 (libbb/lib.a)skip_whitespace.o
 (libbb/lib.a)speed_table.o
+(libbb/lib.a)str_tolower.o
 (libbb/lib.a)time.o
 (libbb/lib.a)u_signal_names.o
+(libbb/lib.a)uuencode.o
 (libbb/lib.a)vfork_daemon_rexec.o
 (libbb/lib.a)warn_ignoring_args.o
 (libbb/lib.a)wfopen.o
@@ -492,10 +561,8 @@ attempt to open util-linux/volume_id/built-in.o succeeded
 (libbb/lib.a)xgethostbyname.o
 (libbb/lib.a)xreadlink.o
 (libbb/lib.a)xregcomp.o
-(libbb/lib.a)bb_askpass.o
 (libbb/lib.a)bb_qsort.o
-(libbb/lib.a)concat_subpath_file.o
-(libbb/lib.a)herror_msg_and_die.o
+(libpwdgrp/lib.a)uidgid_get.o
 attempt to open /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libcrypt.so failed
 attempt to open /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libcrypt.a failed
 attempt to open /usr/local/ARC/gcc/bin/../lib/gcc/libcrypt.so failed
@@ -504,6 +571,14 @@ attempt to open /usr/local/ARC/gcc//lib/gcc/arc-linux-uclibc/4.2.1/libcrypt.so f
 attempt to open /usr/local/ARC/gcc//lib/gcc/arc-linux-uclibc/4.2.1/libcrypt.a failed
 attempt to open /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/lib/libcrypt.so succeeded
 -lcrypt (/usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/lib/libcrypt.so)
+attempt to open /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libm.so failed
+attempt to open /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libm.a failed
+attempt to open /usr/local/ARC/gcc/bin/../lib/gcc/libm.so failed
+attempt to open /usr/local/ARC/gcc/bin/../lib/gcc/libm.a failed
+attempt to open /usr/local/ARC/gcc//lib/gcc/arc-linux-uclibc/4.2.1/libm.so failed
+attempt to open /usr/local/ARC/gcc//lib/gcc/arc-linux-uclibc/4.2.1/libm.a failed
+attempt to open /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/lib/libm.so succeeded
+-lm (/usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/../../../../arc-linux-uclibc/lib/libm.so)
 attempt to open /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.so failed
 attempt to open /usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a succeeded
 (/usr/local/ARC/gcc/bin/../lib/gcc/arc-linux-uclibc/4.2.1/libgcc.a)_udivsi3.o

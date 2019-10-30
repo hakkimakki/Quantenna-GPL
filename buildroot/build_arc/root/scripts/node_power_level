@@ -1,9 +1,0 @@
-#! /bin/sh
-
-node_num=$1
-if [ "$node_num" == "" ]
-then
-	node_num=128
-fi
-
-echo "calcmd 52 0 6 0 1 $node_num" > /sys/devices/qdrv/control
